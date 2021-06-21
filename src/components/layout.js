@@ -2,6 +2,9 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { Global, css } from '@emotion/react';
 
+import Header from './header';
+import Footer from './footer';
+
 const Layout = ({ children }) => {
     return (
         <>
@@ -52,6 +55,16 @@ const Layout = ({ children }) => {
                         margin: 0 auto;
                         width: 95%;
                     }
+
+                    #gatsby-focus-wrapper {
+                        min-height: 100vh;
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .main {
+                        flex-grow: 1;
+                    }
                 `}
             />
 
@@ -62,14 +75,21 @@ const Layout = ({ children }) => {
                     integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
                     crossorigin="anonymous"
                     referrerpolicy="no-referrer" />
-                <link rel="preconnect" 
+                <link 
+                    rel="preconnect" 
                     href="https://fonts.gstatic.com" />
                 <link 
-                    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@400;700&display=swap" 
+                    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=PT+Sans:wght@700&family=Roboto:wght@400;700&display=swap" 
                     rel="stylesheet" />
             </Helmet>
-            <h1>Desde Layout</h1>
-            {children}
+            
+            <Header />
+            
+            <main className="container main">
+                {children}
+            </main>
+                
+            <Footer />
         </>
     );
 }
