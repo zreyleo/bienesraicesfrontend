@@ -10,6 +10,7 @@ const Footer = () => {
                 padding: 1rem 0;
                 background-color: #0D283B;
                 color: white;
+                margin-top: 50px;
             `}
         >
             <p

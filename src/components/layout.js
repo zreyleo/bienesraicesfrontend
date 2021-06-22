@@ -23,6 +23,7 @@ const Layout = ({ children }) => {
                         font-size: 1.6rem;
                         line-height: 2;
                         font-family: 'Lato', sans-serif;
+                        margin: 0;
                     }
 
                     h1, h2, h3 {
@@ -70,8 +71,9 @@ const Layout = ({ children }) => {
 
             <Helmet>
                 <title>Bienes Raices</title>
-                <link rel="stylesheet"
+                <link
                     href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+                    rel="preconnect"
                     integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
                     crossorigin="anonymous"
                     referrerpolicy="no-referrer" />
@@ -85,7 +87,7 @@ const Layout = ({ children }) => {
             
             <Header />
             
-            <main className="container main">
+            <main className="main">
                 {children}
             </main>
                 
