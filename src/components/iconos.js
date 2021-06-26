@@ -31,26 +31,25 @@ const Iconos = ({ habitaciones, estacionamientos, wc }) => {
             }
         }
     `);
-    console.log(iconos);
 
     const imagenesIconos = iconos.edges;
 
     return (
         <ListadoIconos>
             <li>
-                <img src={imagenesIconos[0].node.publicURL} />
+                <img src={imagenesIconos[0].node.publicURL} alt="icono de wc" />
                 <p>{wc}</p>
             </li>
             <li>
-                <img src={imagenesIconos[1].node.publicURL} />
+                <img src={imagenesIconos[1].node.publicURL} alt="icono de estacionamiento" />
                 <p>{estacionamientos}</p>
             </li>
             <li>
-                <img src={imagenesIconos[2].node.publicURL} />
+                <img src={imagenesIconos[2].node.publicURL} alt="icono de habitacion" />
                 <p>{habitaciones}</p>
             </li>
         </ListadoIconos>
     );
 }
- 
+
 export default Iconos;

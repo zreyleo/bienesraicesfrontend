@@ -9,7 +9,6 @@ import * as listadoPropiedades from '../css/listado-propiedades.module.css';
 
 const ListadoPropiedades = () => {
     const data = usePropiedades();
-    console.log(data);
 
     const [propiedades, setPropiedades] = useState([]);
 
